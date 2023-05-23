@@ -1,3 +1,5 @@
+@import '../../styles/variables.module.scss';
+
 .bg_code {
   background-color: rgb(40, 42, 54);
 }
@@ -25,8 +27,8 @@
 .type {
   font-family: monospace;
   color: #0000;
-  background: linear-gradient(-90deg, #00dffc 5px, #0000 0) 10px 0,
-    linear-gradient(#00dffc 0 0) 0 0;
+  background: linear-gradient(-90deg, $black 5px, #0000 0) 10px 0,
+    linear-gradient($black 0 0) 0 0;
   background-size: calc(var(--n) * 1ch) 200%;
   -webkit-background-clip: padding-box, text;
   background-clip: padding-box, text;
@@ -34,6 +36,20 @@
   animation: b 0.7s infinite steps(1),
     t calc(var(--n) * 0.025s) steps(var(--n)) forwards;
 }
+
+[data-theme='dark'] .type {
+  font-family: monospace;
+  color: #0000;
+  background: linear-gradient(-90deg, $halfWhite 5px, #0000 0) 10px 0,
+    linear-gradient($halfWhite 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b 0.7s infinite steps(1),
+    t calc(var(--n) * 0.025s) steps(var(--n)) forwards;
+}
+
 @keyframes t {
   from {
     background-size: 0 200%;

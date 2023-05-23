@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 import { animated, useSpring } from 'react-spring';
 
-type ThemeType = { theme: string | undefined };
+export type ThemeType = { theme: string | undefined };
 
-const Icon: FC<ThemeType> = ({ theme }) => {
+const ToggleButtonIcon: FC<ThemeType> = ({ theme }) => {
   const white = '#e3e4e6';
   const black = '#212121';
   const circleAnimation = useSpring({
@@ -44,4 +44,4 @@ const Icon: FC<ThemeType> = ({ theme }) => {
   );
 };
 
-export default Icon;
+export default ToggleButtonIcon;

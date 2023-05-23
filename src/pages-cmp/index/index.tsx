@@ -3,7 +3,7 @@ import { Typewriter } from '@/cmp/typewriter/typewriter';
 
 import styles from './index.module.scss';
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <Navbar />
@@ -29,6 +29,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

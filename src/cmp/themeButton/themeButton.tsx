@@ -1,9 +1,10 @@
+import type { FC } from 'react';
 import { useTheme } from 'next-themes';
 
-import Icon from './themeButtonIcon';
+import ToggleButtonIcon from './themeButtonIcon';
 import styles from './themeButton.module.scss';
 
-function ThemeBtn() {
+const ThemeBtn: FC<{}> = () => {
   const { theme, setTheme } = useTheme();
   return (
     <button
@@ -13,9 +14,9 @@ function ThemeBtn() {
         setTheme(theme === 'dark' ? 'light' : 'dark');
       }}
     >
-      <Icon theme={theme} />
+      <ToggleButtonIcon theme={theme} />
     </button>
   );
-}
+};
 
 export default ThemeBtn;
