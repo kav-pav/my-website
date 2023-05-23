@@ -1,24 +1,15 @@
-import Navbar from '@/cmp/Navbar/Navbar';
+import type { FC } from 'react';
+
 import { Typewriter } from '@/cmp/typewriter/typewriter';
 
 import styles from './index.module.scss';
 
-const Home = () => {
+const Home: FC<{}> = () => {
   return (
     <div>
-      <Navbar />
       <div className={styles.typewritter_container}>
         <div className={styles.typewritter_wrapper}>
           <Typewriter />
-          {/* <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(`import React from "react"`)
-                .pauseFor(500)
-                .start();
-            }}
-            options={{ wrapperClassName: styles.typewritter_container }}
-          /> */}
         </div>
       </div>
       <div className={styles.sentence_container}>
